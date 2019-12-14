@@ -1,0 +1,70 @@
+.login {
+    &__left {
+        width: 40%;
+        float: left;
+        height: 100vh;
+    }
+
+    &__right {
+        width: 60%;
+        float: right;
+        background-color: black;
+        height: 100vh;
+    }
+
+    .login-form {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 30vh;
+
+        &__error {
+            color: $red;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        &__title {
+            @include title-big;
+            color: white;
+        }
+
+        &__switch {
+            display: block;
+            font-style: italic;
+            margin-top: 4px;
+            color: white;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 15px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__input-container {
+            width: 60%;
+            margin-top: 50px;
+        }
+
+        &__input {
+            @include input;
+            width: 88%;
+            margin-top: 10px;
+            display: block;
+            color: white;
+            border-color: white;
+            background-color: black;
+            &--success {
+                border-color: $green;
+                color: $green;
+            }
+        }
+
+        &__submit {
+            @include button;
+            display: block;
+            background-color: white;
+            color: white;
+            background-color: $green;
+            margin: 10px auto;
+        }
+    }
+}

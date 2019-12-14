@@ -1,0 +1,28 @@
+//default styling
+@mixin title-big {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 50px;  
+}
+
+@mixin input {
+    border: 1px solid $grey;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    outline: none;
+    font-weight: 100px;
+}
+
+@mixin button {
+    border: none;
+    background-color: grey;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    outline: none;
+    font-weight: 100px;
+}
