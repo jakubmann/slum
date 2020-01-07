@@ -1,9 +1,22 @@
 <template>
 <div class="login">
     <div class="login__left">
+        <div class="preview">
+            <div class="preview__left">
+                <div :key="post.id" v-for="post in previewPostsLeft" class="preview__post">
+                    <h3 class="title">{{ post.title }}</h3>
+                    <pre class="body">{{ post.body }}</pre>
+                </div>
+            </div>
+            <div class="preview__right">
+                <div :key="post.id" v-for="post in previewPostsRight" class="preview__post">
+                    <h3 class="title">{{ post.title }}</h3>
+                    <pre class="body">{{ post.body }}</pre>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="login__right">
-        
         <div class="login-form" v-if="!register">
             <h2 class="login-form__title">Login</h2>
             <span class="login-form__switch" @click="register = true">or Register</span>
@@ -41,7 +54,9 @@ export default {
             inputPassword: '',
             inputPasswordConfirm: '',
             loggedIn: false,
-            error: ''
+            error: '',
+            previewPostsLeft: [],
+            previewPostsRight: [],
         }
     },
     methods: {
@@ -68,6 +83,14 @@ export default {
                 window.console.log(response.data)
             })
         }
+    },
+    mounted() {
+        this.$http
+        .get("/api/post/preview")
+        .then((response) => {
+            this.previewPostsLeft = response.data.slice(0, 20)
+            this.previewPostsRight = response.data.slice(20, 40)
+        })
     }
 }
 </script>

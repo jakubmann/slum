@@ -2,6 +2,7 @@
     <div class="home">
         <Header />
 
+        <AddPost @posted="reloadPosts()"/>
         <div class="posts">
             <h2 class="posts__heading">Recent posts</h2>
             <Post v-for="post in posts" :key="post.id" :id="post.id" :title="post.title" :body="post.body" :post_date="post.post_date" /> 
@@ -12,12 +13,14 @@
 <script>
 import Header from './components/Header.vue'
 import Post from './components/Post.vue'
+import AddPost from './components/AddPost.vue'
 
 export default {
     name: 'home',
     components: {
         Header,
-        Post
+        Post,
+        AddPost
     },
     data() {
         return {
@@ -27,6 +30,15 @@ export default {
     },
     methods: {
         getPosts() {
+            this.$http
+            .post("/api/post/scroll", { count: 10, previous: this.count})
+            .then((response) => {
+                this.posts = response.data
+                this.count += 10
+            })
+        },
+        reloadPosts() {
+            this.count = 0
             this.$http
             .post("/api/post/scroll", { count: 10, previous: this.count})
             .then((response) => {

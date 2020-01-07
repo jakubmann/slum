@@ -1,5 +1,59 @@
 .login {
+    .preview {
+        @keyframes movedown {
+            from { margin-top: -150% }
+            50% { margin-top: 0% }
+            to { margin-top: -150% }
+        }
+
+        @keyframes moveup {
+            from { margin-top: 0% }
+            50% { margin-top: -150% }
+            to { margin-top: 0% }
+        }
+
+        &__post {
+            margin-top: 20px;
+        }
+        &__left {
+            width: 50%;
+            float: left;
+            margin-top: -50%;
+            -webkit-animation: movedown 120s infinite; /* Safari 4.0 - 8.0 */
+            animation: movedown 120s infinite;
+            animation-timing-function: linear;
+        }
+        &__right {
+            width: 50%;
+            float: right;
+            margin-top: -50%;
+            -webkit-animation: moveup 120s infinite; /* Safari 4.0 - 8.0 */
+            animation: moveup 120s infinite;
+            animation-timing-function: linear;
+        }
+
+        .title {
+            color: $grey;
+            font: {
+                family: 'IBM Plex Mono', monospace;
+                size: 14px;
+                weight: 500;
+            }
+        }
+
+        .body {
+            color: $grey;
+            margin-top: 5px;
+            font: {
+                family: 'IBM Plex Sans', sans-serif;
+                size: 10px;
+                weight: 400;
+            }
+        }
+    }
+
     &__left {
+        overflow: hidden;
         width: 40%;
         float: left;
         height: 100vh;
