@@ -1,0 +1,12 @@
+.home {
+    background-color: $bg-grey;
+    .posts {
+        padding: 20px 50px;
+        &__heading {
+            @include heading-normal();
+            text-align: center;
+            padding: 20px;
+            font-weight: 100;
+        }
+    }
+}

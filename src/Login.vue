@@ -56,6 +56,7 @@ export default {
                 if (response.data == 'success') {
                     this.loggedIn = true
                     this.$store.commit('setAuthentication', true)
+                    this.$store.dispatch('getUser')
                     window.setTimeout(() => {
                         this.$router.replace('/')
                     }, 600)

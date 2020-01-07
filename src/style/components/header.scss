@@ -1,0 +1,71 @@
+.header {
+    background-color: black;
+    overflow-y: auto;
+    &__title {
+        padding: 20px;
+        float: left;
+        display: block;
+        height: 60px;
+    }
+
+    .search {
+        margin-left: 20px;
+        margin-top: 38px;
+        float: left;
+        width: 300px;
+        background-color: white;
+        height: 25px;
+        border-radius: 10px;
+        &__input {
+            margin-top: 2px;
+            margin-left: 10px;
+            display: block;
+            width: 260px;
+            background: none;
+            border: none;
+            float: left;
+            font: {
+                family: 'IBM Plex Mono', monospace;
+            }
+        }
+
+        &__button {
+            display: block;
+            width: 18px;
+            float: right;
+            margin-top: 3px;
+            margin-right: 5px;
+        }
+    }
+
+    .user {
+        float: right;
+        width: 180px;
+        padding: 25px;
+        margin-right: 50px;
+
+        &__image {
+            display: block;
+            float: left;
+            height: 50px;
+        }
+
+        &__text {
+            color: white;
+            font: {
+                family: "IBM Plex Mono", monospace;
+                weight: 400;
+                size: 14px;
+            }
+        }
+
+        &__logout {
+            margin-top: 5px;
+            @include button();
+            font-size: 14px;
+            font-weight: 500;
+            padding: 5px 10px;
+            background-color: $red;
+        }
+    }
+}

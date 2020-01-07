@@ -39,7 +39,8 @@ const routes = [
 
 //create router
 const router = new Router({
-  routes
+  routes: routes,
+  mode: 'history'
 })
 
 //create main vue instance

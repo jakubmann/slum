@@ -6,6 +6,13 @@
     font-size: 50px;  
 }
 
+@mixin heading-normal {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 35px;
+}
+
 @mixin input {
     border: 1px solid $grey;
     border-radius: 20px;

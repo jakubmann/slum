@@ -25,6 +25,10 @@ const store = new Vuex.Store({
         },
         setPosts(state, posts) {
             state.posts = posts
+        },
+        clearUser(state) {
+            state.user = {}
+            state.authenticated = false
         }
     },
     actions: {
