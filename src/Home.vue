@@ -31,19 +31,19 @@ export default {
     methods: {
         getPosts() {
             this.$http
-            .post("/api/post/scroll", { count: 10, previous: this.count})
+            .post("/api/post/scroll", { count: 50, previous: this.count})
             .then((response) => {
                 this.posts = response.data
-                this.count += 10
+                this.count += 50
             })
         },
         reloadPosts() {
             this.count = 0
             this.$http
-            .post("/api/post/scroll", { count: 10, previous: this.count})
+            .post("/api/post/scroll", { count: 50, previous: this.count})
             .then((response) => {
                 this.posts = response.data
-                this.count += 10
+                this.count += 50
             })
         }
     },

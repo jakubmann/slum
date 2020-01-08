@@ -38,4 +38,15 @@ class Post {
             echo "success";
         }
     }
+
+    public function id($id) {
+        if ($query = Db::query(
+            'SELECT posts.id, posts.author, posts.title, posts.body, posts.post_date, user.username
+            FROM posts
+            INNER JOIN user ON user.id = posts.author', 
+            array(":id" => $id)
+        )) {
+            echo json_encode($query->fetchAll());
+        } 
+    }
 }

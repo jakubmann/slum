@@ -1,13 +1,15 @@
 <template>
-    <div class="post">
-        <h3 class="post__title">{{ title }}</h3>
-        <pre class="post__body">{{ body }}</pre>                
+    <div class="singlepost">
+
     </div>
 </template>
 
 <script>
 export default {
-    name: 'post',
+    name: 'singlePost',
+    data() {
+        
+    },
     props: {
         id: Number,
         author: Number,
@@ -18,4 +20,3 @@ export default {
     }
 }
 </script>
-

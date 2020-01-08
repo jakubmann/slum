@@ -1,7 +1,7 @@
 <template>
     <div class="header">
-        <img src="../assets/title.png" class="header__title" alt="logo">
-        <Search />
+        <img @click="$router.push('/')" src="../assets/title.png" class="header__title" alt="logo">
+        <Search v-if="search"/>
         <div class="user">
             <img class="user__image" src="../assets/user.png" alt="user">
             <div class="user__text">{{ $store.state.user.username }}</div>
@@ -21,6 +21,12 @@ export default {
     data() {
         return {
 
+        }
+    },
+    props: {
+        search: {
+            default: true,
+            type: Boolean
         }
     },
     methods: {

@@ -8,6 +8,7 @@ import App from './App.vue'
 
 import Login from './Login.vue'
 import Home from './Home.vue'
+import SearchResults from './SearchResults.vue'
 
 //style
 import './style/main.scss'
@@ -35,6 +36,10 @@ const routes = [
     path: '/login',
     component: Login
   },
+  {
+    path: '/search/:query',
+    component: SearchResults
+  }
 ]
 
 //create router

@@ -14,7 +14,8 @@ const store = new Vuex.Store({
     state: {
         authenticated: false,
         user: {},
-        posts: []
+        posts: [],
+        search: false
     },
     mutations: {
         setAuthentication(state, status) {
