@@ -6,9 +6,10 @@ class Post {
         $previous = $data->previous;
         $posts = array();
 
-        if ($query = Db::query('SELECT title, body, id, author, post_date
+        if ($query = Db::query('SELECT posts.title, posts.body, posts.id, posts.author, posts.postdate, user.username as author_name
             FROM posts
-            ORDER BY post_date DESC
+            INNER JOIN user ON user.id = posts.author
+            ORDER BY posts.postdate DESC
             LIMIT :previous, :count',
             array(":previous" => $previous, ":count" => $count)
         )) {
@@ -17,7 +18,7 @@ class Post {
     }
 
     public function preview() {
-        if ($query = Db::query('SELECT id, title, body, post_date
+        if ($query = Db::query('SELECT id, title, body, postdate
             FROM posts
             ORDER BY post_date DESC
             LIMIT 40'
@@ -30,7 +31,7 @@ class Post {
         $data = json_decode(file_get_contents('php://input'));
         $title = $data->title;
         $body = $data->body;
-        if ($query = Db::query("INSERT INTO posts(author, title, body, post_date) VALUES (:author, :title, :body, CURRENT_TIMESTAMP)",
+        if ($query = Db::query("INSERT INTO posts(author, title, body) VALUES (:author, :title, :body)",
         array(":author" => $_SESSION['user_id'],
             ":title" => $title,
             ":body" => $body
@@ -41,12 +42,13 @@ class Post {
 
     public function id($id) {
         if ($query = Db::query(
-            'SELECT posts.id, posts.author, posts.title, posts.body, posts.post_date, user.username
+            'SELECT posts.id, posts.author, posts.title, posts.body, posts.postdate, user.username AS author_name
             FROM posts
-            INNER JOIN user ON user.id = posts.author', 
+            INNER JOIN user ON user.id = posts.author
+            WHERE posts.id = :id', 
             array(":id" => $id)
         )) {
-            echo json_encode($query->fetchAll());
+            echo json_encode($query->fetch(PDO::FETCH_ASSOC));
         } 
     }
 }

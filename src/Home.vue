@@ -5,7 +5,13 @@
         <AddPost @posted="reloadPosts()"/>
         <div class="posts">
             <h2 class="posts__heading">Recent posts</h2>
-            <Post v-for="post in posts" :key="post.id" :id="post.id" :title="post.title" :body="post.body" :post_date="post.post_date" /> 
+            <Post v-for="post in posts" :key="post.id" 
+                :id="post.id"
+                :title="post.title"
+                :body="post.body" 
+                :post_date="post.post_date"
+                :author_name="post.author_name"
+            /> 
         </div>
     </div>
 </template>

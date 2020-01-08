@@ -9,6 +9,7 @@ import App from './App.vue'
 import Login from './Login.vue'
 import Home from './Home.vue'
 import SearchResults from './SearchResults.vue'
+import SinglePost from './SinglePost.vue'
 
 //style
 import './style/main.scss'
@@ -39,6 +40,10 @@ const routes = [
   {
     path: '/search/:query',
     component: SearchResults
+  },
+  {
+    path: '/post/:id',
+    component: SinglePost
   }
 ]
 

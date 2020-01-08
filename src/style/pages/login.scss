@@ -76,6 +76,15 @@
             font-family: 'IBM Plex Mono', monospace;
         }
 
+        &__message {
+            color: white;
+            font: {
+                family: 'IBM Plex Mono', monospace;
+                size: 35px;
+                weight: 500;   
+            }
+        }
+
         &__title {
             @include title-big;
             color: white;

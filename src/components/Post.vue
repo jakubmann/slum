@@ -1,6 +1,7 @@
 <template>
     <div class="post">
-        <h3 class="post__title">{{ title }}</h3>
+        <h3 @click="$router.push('/post/' + id)" class="post__title">{{ title }}</h3>
+        <h4 class="post__author">{{ author_name }}</h4>
         <pre class="post__body">{{ body }}</pre>                
     </div>
 </template>
@@ -11,7 +12,7 @@ export default {
     props: {
         id: Number,
         author: Number,
-        authorName: String,
+        author_name: String,
         title: String,
         body: String,
         post_date: String

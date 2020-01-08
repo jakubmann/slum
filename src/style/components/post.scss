@@ -1,7 +1,7 @@
 .post {
     background-color: white;
     margin-left: 10%;
-    width: 80%;
+    width: 50%;
     margin: 0px auto;
     margin-top: 10px;
     padding: 20px;
@@ -14,11 +14,13 @@
     
 
     &__title {
-        border-bottom: 1px solid $light-grey;
         font: {
             family: 'IBM Plex Mono', monospace;
             size: 25px;
-            weight: 300;
+            weight: 400;
+        }
+        &:hover {
+            cursor: pointer;
         }
     }
 
@@ -31,6 +33,19 @@
             family: 'IBM Plex Sans', sans-serif;
             size: 17px;
             weight: 300;
+        }
+    }
+
+    &__author {
+        font: {
+            family: 'IBM Plex Mono', sans-serif;
+            size: 17px;
+            weight: 300;
+            style: italic;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
