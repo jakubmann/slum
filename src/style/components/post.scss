@@ -29,11 +29,7 @@
         margin-top: 10px;
         line-height: 1.5;
         text-align: left;
-        font: {
-            family: 'IBM Plex Sans', sans-serif;
-            size: 17px;
-            weight: 300;
-        }
+        @include text();
     }
 
     &__author {

@@ -1,0 +1,22 @@
+.notfound {
+    &__heading {
+        @include title-big();
+        text-align: center;
+        margin-top: 250px;
+    }
+    &__link {
+        display: block;
+        color: white;
+        text-decoration: none;
+        width: 15%;
+        text-align: center;
+        font: {
+            family: 'IBM Plex Mono', monospace;
+            size: 30px;
+            weight: 300;
+        }
+        margin: 100px auto;
+        background-color: black;
+        padding: 20px;
+    }
+}

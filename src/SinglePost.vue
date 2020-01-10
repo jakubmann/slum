@@ -1,10 +1,12 @@
 <template>
     <div class="singlepost">
         <Header />
-        <h2 class="singlepost__title">{{ postdata.title }}</h2>
-        <h3 class="singlepost__author">{{ postdata.author_name }}</h3>
-        <pre class="singlepost__body">{{ postdata.body }}</pre>
-        <p class="singlepost__post-date">{{ postdata.postdate }}</p>
+        <div class="singlepost__container">
+            <h2 class="singlepost__title">{{ postdata.title }}</h2>
+            <h3 class="singlepost__author">{{ postdata.author_name }}</h3>
+            <pre class="singlepost__body">{{ postdata.body }}</pre>
+            <p class="singlepost__post-date">{{ postdata.postdate }}</p>
+        </div>
     </div>
 </template>
 

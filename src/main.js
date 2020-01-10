@@ -10,6 +10,7 @@ import Login from './Login.vue'
 import Home from './Home.vue'
 import SearchResults from './SearchResults.vue'
 import SinglePost from './SinglePost.vue'
+import NotFound from './NotFound.vue'
 
 //style
 import './style/main.scss'
@@ -44,6 +45,10 @@ const routes = [
   {
     path: '/post/:id',
     component: SinglePost
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 ]
 

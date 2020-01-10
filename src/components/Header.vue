@@ -7,6 +7,11 @@
             <div class="user__text">{{ $store.state.user.username }}</div>
             <button class="user__logout" @click="logout()">Log Out</button>
         </div>
+        <div class="navigation">
+            <router-link to="/" class="navigation__link">Home</router-link>
+            <router-link to="/categories" class="navigation__link">Categories</router-link>
+        </div>
+        
     </div>
 </template>
 

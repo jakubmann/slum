@@ -1,0 +1,30 @@
+.singlepost {
+    &__container {
+        padding: 25px;
+        width: 50%;
+        margin: 0px auto;
+    }
+    &__title {
+        @include heading-normal();
+        margin-top: 50px;
+    }
+
+    &__body {
+        @include text();
+        margin-top: 25px;
+    }
+
+    &__author {
+        font: {
+            family: 'IBM Plex Mono', monospace;
+            size: 20px;
+        }
+    }
+
+    &__post-date {
+        margin-top: 40px;
+        font: {
+            family: 'IBM Plex Mono', monospace;
+        }
+    }
+}

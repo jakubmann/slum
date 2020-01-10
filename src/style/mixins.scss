@@ -33,3 +33,11 @@
     outline: none;
     font-weight: 100px;
 }
+
+@mixin text {
+    font: {
+        family: 'IBM Plex Sans', sans-serif;
+        size: 17px;
+        weight: 300;
+    }
+}
