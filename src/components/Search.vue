@@ -1,6 +1,6 @@
 <template>
     <div class="search">
-        <input type="text" class="search__input" placeholder="Search" v-model="query" @keyup.enter="search()">
+        <input type="text" class="search__input" :placeholder="$t('header.search')" v-model="query" @keyup.enter="search()">
         <img class="search__button" src="../assets/search.png" alt="search" @click="search()">
     </div>
 </template>

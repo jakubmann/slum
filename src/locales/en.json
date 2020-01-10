@@ -1,0 +1,15 @@
+{
+  "home": {
+    "heading": "Most recent posts",
+    "title": "Title",
+    "body": "Blank page",
+    "submit": "Submit"
+  },
+  "header": {
+    "logout": "Log Out",
+    "search": "Search",
+    "categories": "Categories",
+    "home": "Home"
+  },
+  "backHome": "Back Home"
+}

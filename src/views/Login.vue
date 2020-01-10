@@ -37,7 +37,7 @@
                 <input class="login-form__input" :class="{ 'login-form__input--success': success }" type="text" v-model="inputEmail" placeholder="Email">
                 <input class="login-form__input" :class="{ 'login-form__input--success': success }" type="password" v-model="inputPassword" placeholder="Password">
                 <input class="login-form__input" :class="{ 'login-form__input--success': success }" @keyup.enter="register()" type="password" v-model="inputPasswordConfirm" placeholder="Confirm Password">
-                <button class="login-form__submit" @click="register()">Register</button>
+                <button class="login-form__submit" @click="register()" v-if="!success">Register</button>
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 
         <AddPost @posted="reloadPosts()"/>
         <div class="posts">
-            <h2 class="posts__heading">Recent posts</h2>
+            <h2 class="posts__heading">{{ $t('home.heading') }}</h2>
             <Post v-for="post in posts" :key="post.id" 
                 :id="post.id"
                 :title="post.title"
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Post from './components/Post.vue'
-import AddPost from './components/AddPost.vue'
+import Header from '../components/Header.vue'
+import Post from '../components/Post.vue'
+import AddPost from '../components/AddPost.vue'
 
 export default {
     name: 'home',

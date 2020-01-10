@@ -4,7 +4,7 @@
 
         <div class="search">
             <input class="search__input" type="text" placeholder="Search" v-model="queryInput" @keyup.enter="search()">
-            <button class="search__button" @click="search()"><img class="search__image" src="./assets/search-white.png" alt="Search"></button>
+            <button class="search__button" @click="search()"><img class="search__image" src="../assets/search-white.png" alt="Search"></button>
         </div>
         
         
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import Header from '../components/Header.vue'
 
 export default {
     name: 'searchResults',

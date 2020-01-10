@@ -1,9 +1,9 @@
 <template>
     <div class="addpost" :class="{  'addpost--success': posted }">
         <div class="addpost__error" v-if="error">{{ error }}</div>
-        <input class="addpost__title" type="text" v-model="postTitle" placeholder="Title">
-        <textarea class="addpost__body" v-model="postBody" rows="10" cols="50" placeholder="Blank page"></textarea>
-        <button class="addpost__submit" :class="{ 'addpost__submit--disabled': disabled }" @click="submit()">Submit</button>
+        <input class="addpost__title" type="text" v-model="postTitle" :placeholder="$t('home.title')">
+        <textarea class="addpost__body" v-model="postBody" rows="10" cols="50" :placeholder="$t('home.body')"></textarea>
+        <button class="addpost__submit" :class="{ 'addpost__submit--disabled': disabled }" @click="submit()">{{ $t('home.submit') }}</button>
     </div>
 </template>
 

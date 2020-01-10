@@ -1,0 +1,16 @@
+.settings {
+    &__container {
+        margin-top: 120px;
+    }
+
+    .changelocale {
+        &__select {
+            &:active {
+                outline: none;
+            }
+            border: 1px solid black;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    }
+}

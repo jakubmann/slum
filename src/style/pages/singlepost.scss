@@ -18,7 +18,11 @@
         font: {
             family: 'IBM Plex Mono', monospace;
             size: 20px;
+            weight: 300;
+            style: italic;
         }
+        color: $grey;
+        margin-top: 5px;
     }
 
     &__post-date {

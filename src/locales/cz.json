@@ -1,0 +1,15 @@
+{
+    "home": {
+      "heading": "Nejnovější příspěvky",
+      "title": "Název",
+      "body": "Prázdná stránka",
+      "submit": "Přidat"
+    },
+    "header": {
+      "logout": "Odhlásit",
+      "search": "Hledat",
+      "categories": "Kategorie",
+      "home": "Home"
+    },
+    "backHome": "Zpět"
+  }
